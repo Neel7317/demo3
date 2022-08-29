@@ -1,11 +1,3 @@
-from distutils.core import run_setup
-import joblib
-import mlflow
-import argparse
-from pprint import pprint
-from src.models.train_model import read_params
-from mlflow.tracking import MlflowClient
-
 import yaml
 import argparse
 import pandas as pd

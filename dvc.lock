@@ -59,3 +59,13 @@ stages:
     - path: models/model.joblib
       md5: 2cda875c90b6041dda4d19c358632920
       size: 623737
+  model_monitor:
+    cmd: python src/models/model_monitor.py --config=params.yaml
+    deps:
+    - path: data/raw/train_new.csv
+      md5: dc73c86273dfc5c9170a94003ffeaa08
+      size: 27387
+    outs:
+    - path: reports/data_and_target_drift_dashboard.html
+      md5: 36669387ff69bd1025c041727cf14d1d
+      size: 3207783
